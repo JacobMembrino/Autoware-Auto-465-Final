@@ -1,7 +1,7 @@
 import velodyne_decoder as vd
 
 config = vd.Config(model="VLP-16", rpm=600)
-pcap_file = 'attack.pcap'
+pcap_file = 'attack.pcap' #file may have different name. Hard-coded for now
 cloud_arrays = []
 testFile = open("TEST", 'wb')
 for stamp, points in vd.read_pcap(pcap_file, config):
